@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\DB;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,8 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $users = DB::table('users')->get();
-    dd($users);
-    //return view('login',);
+    return view('welcome');
 });
 
 Route::get('/dashboard', function () {
